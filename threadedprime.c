@@ -20,7 +20,7 @@ void handleSIGINT() {
 // mainly used for debugging
 void *printThNr() {
 	// number of cores will probably not warrant a mutex
-	printf("thread #%d with thread ID %ld\n", tc++, pthread_self());
+	printf("started thread #%d with thread ID %ld\n", tc++, pthread_self());
 	return 0;
 }
 
@@ -34,6 +34,7 @@ void printPrimes(bool primes[]) {
 }
 
 void *sieveOfAtkin() {
+	printThNr();
 	bool sieve[LIMIT];
 	for (uintmax_t i = 0; i < LIMIT; i++) {
 		sieve[i] = false;
