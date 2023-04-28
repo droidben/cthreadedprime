@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-std=c99 -pedantic -pedantic-errors -Werror -Wall -Wextra
+CFLAGS=-std=c99 -pedantic -pedantic-errors -Werror -Wall -Wextra -g -pthread
 
 all: threadedprime
 
